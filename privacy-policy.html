@@ -11,7 +11,7 @@
     <header><a href="index.html">Greet<span>Pop</span></a></header>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 19 May 2026</p>
+    <p class="updated">Last updated: 23 May 2026</p>
 
     <p>This Privacy Policy explains how Nazar Verbytskyi ("I", "me", "my") collects, uses, and protects your personal data when you use <strong>GreetPop</strong> ("the App").</p>
 
@@ -27,21 +27,28 @@
     <table>
       <tr><th>Data</th><th>Why Collected</th></tr>
       <tr><td><strong>Account info</strong> — name, email address</td><td>Create and manage your account</td></tr>
-      <tr><td><strong>Friends/contacts</strong> — name, birthday, phone, relationship label</td><td>Power reminders and greeting suggestions</td></tr>
-      <tr><td><strong>Events</strong> — occasion type, date, notes</td><td>Schedule and personalise reminders</td></tr>
-      <tr><td><strong>Device contacts</strong> (only if you grant permission)</td><td>Import friends from your address book</td></tr>
-      <tr><td><strong>Push notification token</strong></td><td>Deliver birthday and event reminders</td></tr>
-      <tr><td><strong>Siri shortcuts data</strong></td><td>Enable voice-activated reminders (iOS only)</td></tr>
+      <tr><td><strong>Sign-in provider data</strong> — name and email from Google or Apple when you sign in with those services</td><td>Authenticate your account</td></tr>
+      <tr><td><strong>Friends/contacts</strong> — name, birthday, phone number, email, relationship label, notes</td><td>Power reminders and greeting suggestions</td></tr>
+      <tr><td><strong>Friends' social handles</strong> — Instagram, Snapchat, Discord, Telegram, Facebook usernames (optional, only if you add them)</td><td>Provide quick-launch links for sending greetings</td></tr>
+      <tr><td><strong>Events</strong> — occasion type, date, notes, recurrence settings</td><td>Schedule and personalise reminders</td></tr>
+      <tr><td><strong>Greeting history</strong> — occasion, channel used, and a short excerpt of the greeting message sent</td><td>Show you a memory timeline of past greetings</td></tr>
+      <tr><td><strong>Device contacts</strong> (only if you grant permission)</td><td>Import friends from your address book; nothing is uploaded until you explicitly tap Import</td></tr>
+      <tr><td><strong>Photos from your library</strong> (only if you grant permission)</td><td>Add photos to greeting cards you create</td></tr>
+      <tr><td><strong>Local notification data</strong> — title, body, delivery time, and read status</td><td>Track your notification history in the in-app Notification Centre</td></tr>
       <tr><td><strong>Subscription status</strong></td><td>Unlock premium features</td></tr>
-      <tr><td><strong>Usage analytics</strong></td><td>Improve app performance and features</td></tr>
+      <tr><td><strong>Voice data</strong> (only if you grant microphone permission)</td><td>Process voice commands for the voice assistant (Android) and message dictation; processed entirely on your device and never stored or transmitted</td></tr>
+      <tr><td><strong>Siri shortcuts data</strong></td><td>Enable voice-activated reminders (iOS only)</td></tr>
+      <tr><td><strong>Usage analytics</strong> — events and user properties (see Section 4)</td><td>Understand how the App is used to improve it</td></tr>
       <tr><td><strong>Device identifiers</strong></td><td>Crash reporting and analytics</td></tr>
     </table>
     <p>I do <strong>not</strong> collect payment card details. Payments are handled entirely by Apple.</p>
+    <p>I do <strong>not</strong> store the full text of greeting messages you compose. Only a short excerpt is saved to your greeting history.</p>
+    <p>I do <strong>not</strong> access your camera. Photo access is limited to your existing photo library when you choose to add a photo to a card.</p>
 
     <hr />
 
     <h2>3. Legal Basis for Processing (GDPR / UK GDPR)</h2>
-    <p>For users in the EU, UK, Cyprus, Ireland, and Malta:</p>
+    <p>For users in the EU and UK:</p>
     <table>
       <tr><th>Processing Activity</th><th>Legal Basis</th></tr>
       <tr><td>Providing the core app service</td><td><strong>Contract</strong> (Art. 6(1)(b))</td></tr>
@@ -54,33 +61,78 @@
 
     <h2>4. Third-Party Services</h2>
     <table>
-      <tr><th>Processor</th><th>Purpose</th><th>Privacy Info</th></tr>
-      <tr><td><strong>Supabase</strong></td><td>Backend database and authentication</td><td><a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></td></tr>
-      <tr><td><strong>Apple / App Store</strong></td><td>In-app purchases, subscriptions, and app delivery</td><td><a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></td></tr>
-      <tr><td><strong>Anthropic</strong></td><td>AI greeting generation — receives only the occasion label (e.g. "Birthday"). No personal data is sent.</td><td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td></tr>
+      <tr><th>Processor</th><th>Purpose</th><th>Data Shared</th><th>Privacy Info</th></tr>
+      <tr>
+        <td><strong>Supabase</strong></td>
+        <td>Backend database and authentication</td>
+        <td>Account info, friends, events, reminders, greeting history, notification log</td>
+        <td><a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Apple / App Store</strong></td>
+        <td>Sign-in, in-app purchases, subscriptions, and app delivery</td>
+        <td>Apple ID name and email (sign-in); purchase receipts</td>
+        <td><a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google</strong></td>
+        <td>Sign-in via Google account</td>
+        <td>Google account name and email (sign-in only)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Anthropic</strong></td>
+        <td>AI greeting message generation — when you create a custom occasion, the occasion label (e.g. "Retirement party") is sent to Claude to generate greeting template suggestions. No personal data (names, emails, or contact details) is sent. Generated templates are stored and shared across all users.</td>
+        <td>Occasion label only</td>
+        <td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Mixpanel</strong></td>
+        <td>Usage analytics</td>
+        <td>A pseudonymous user ID, email, platform, country, premium status, friend count, and in-app events (e.g. "reminder saved", "card built"). No message content or friend names are sent.</td>
+        <td><a href="https://mixpanel.com/legal/privacy-policy" target="_blank">mixpanel.com/legal/privacy-policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Facebook</strong> (optional)</td>
+        <td>Birthday import via in-app browser — only if you choose to use this feature</td>
+        <td>You authenticate directly with Facebook; I receive only the birthday data you approve</td>
+        <td><a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Unsplash</strong></td>
+        <td>Card background images fetched from Unsplash servers</td>
+        <td>No personal data; HTTP image requests only</td>
+        <td><a href="https://unsplash.com/privacy" target="_blank">unsplash.com/privacy</a></td>
+      </tr>
     </table>
     <p>I do <strong>not</strong> sell your personal data to any third party.</p>
 
     <hr />
 
     <h2>5. International Data Transfers</h2>
-    <p>Your data is stored on Supabase servers. If you are in the EU/UK, data may be transferred outside your region. Supabase uses Standard Contractual Clauses (SCCs) to ensure adequate protection.</p>
+    <p>Your data is stored on Supabase and Mixpanel servers, which may be located outside your country. If you are in the EU/UK, these transfers are covered by Standard Contractual Clauses (SCCs) or equivalent safeguards.</p>
     <p>For <strong>Hong Kong</strong> users: transfers outside HK are only made where adequate protection exists or with your consent.</p>
 
     <hr />
 
-    <h2>6. Data Retention</h2>
+    <h2>6. Data Security</h2>
+    <p>I take reasonable technical and organisational measures to protect your data, including encrypted connections (TLS), Supabase row-level security, and access controls. No method of transmission over the internet is 100% secure, and I cannot guarantee absolute security.</p>
+
+    <hr />
+
+    <h2>7. Data Retention</h2>
     <ul>
       <li>Account data: retained while your account is active.</li>
-      <li>Friends and events: deleted when you remove them or delete your account.</li>
-      <li>After account deletion: all personal data is permanently erased within <strong>30 days</strong>.</li>
+      <li>Friends, events, reminders, and greeting history: deleted when you remove them or delete your account.</li>
+      <li>After account deletion: all personal data in the database is permanently erased within <strong>30 days</strong>.</li>
+      <li>Analytics data in Mixpanel: your identity is reset on account deletion; historical event data may be retained in aggregated, anonymised form per Mixpanel's retention policy.</li>
     </ul>
 
     <hr />
 
-    <h2>7. Your Rights</h2>
+    <h2>8. Your Rights</h2>
 
-    <p><strong>EU / UK / Ireland / Cyprus / Malta (GDPR / UK GDPR)</strong></p>
+    <p><strong>EU / UK (GDPR / UK GDPR)</strong></p>
     <ul>
       <li>Access, rectify, or erase your data</li>
       <li>Restrict or object to processing</li>
@@ -130,27 +182,38 @@
 
     <hr />
 
-    <h2>8. Children's Privacy</h2>
-    <p>The App is not directed at children under <strong>13</strong> (or <strong>16</strong> in EU/UK). I do not knowingly collect data from children. If you believe a child has provided data, contact me and I will delete it promptly.</p>
+    <h2>9. Children's Privacy</h2>
+    <p>The App is not directed at children under <strong>13</strong> (or <strong>16</strong> in the EU/UK). I do not knowingly collect data from children. If you believe a child has provided data, contact me and I will delete it promptly.</p>
 
     <hr />
 
-    <h2>9. Device Contacts Permission</h2>
-    <p>If you grant access to your device contacts, I read names and phone numbers only to help you import friends. This data is stored in your account. I do not access contacts without your explicit permission and you can revoke it at any time in your device Settings.</p>
+    <h2>10. Device Contacts Permission</h2>
+    <p>If you grant access to your device contacts, I read names, phone numbers, and birthdays only to help you import friends. This data is not uploaded until you explicitly tap Import. You can revoke access at any time in your device Settings.</p>
 
     <hr />
 
-    <h2>10. Push Notifications</h2>
-    <p>You can disable push notifications at any time in your device Settings. This will stop birthday reminders.</p>
+    <h2>11. Photo Library Permission</h2>
+    <p>The card builder lets you add photos from your library to greeting cards. I access your photo library only when you tap to add a photo and only read the image you select. I do not access your camera. You can revoke photo access at any time in your device Settings.</p>
+    <p>Cards you create can be saved back to your photo library — this requires a separate save-to-photos permission, which you grant separately.</p>
 
     <hr />
 
-    <h2>11. Changes to This Policy</h2>
+    <h2>12. Microphone Permission</h2>
+    <p>If you grant microphone access, voice input is processed entirely on your device using your device's built-in speech recognition. No audio is recorded, stored, or transmitted to any server. You can revoke microphone access at any time in your device Settings.</p>
+
+    <hr />
+
+    <h2>13. Notifications</h2>
+    <p>Notifications in GreetPop are <strong>scheduled locally on your device</strong> — no external push server is used. You can disable notifications at any time in your device Settings.</p>
+
+    <hr />
+
+    <h2>14. Changes to This Policy</h2>
     <p>I may update this policy occasionally. I will notify you via the App or email for material changes. The "Last updated" date at the top will always reflect the current version.</p>
 
     <hr />
 
-    <h2>12. Contact</h2>
+    <h2>15. Contact</h2>
     <p><strong>Nazar Verbytskyi</strong><br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
 
     <footer>© 2026 GreetPop · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></footer>
