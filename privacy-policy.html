@@ -11,14 +11,14 @@
     <header><a href="index.html">Greet<span>Pop</span></a></header>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 23 May 2026</p>
+    <p class="updated">Last updated: 24 May 2026</p>
 
     <p>This Privacy Policy explains how Nazar Verbytskyi ("I", "me", "my") collects, uses, and protects your personal data when you use <strong>GreetPop</strong> ("the App").</p>
 
     <hr />
 
     <h2>1. Who I Am (Data Controller)</h2>
-    <p><strong>Nazar Verbytskyi</strong><br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
+    <p><strong>Nazar Verbytskyi</strong><br />Stanczyka 22, Kraków, 30-126, Poland<br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
     <p>For users in the EU/UK, I am the data controller responsible for your personal data.</p>
 
     <hr />
@@ -39,9 +39,9 @@
       <tr><td><strong>Voice data</strong> (only if you grant microphone permission)</td><td>Process voice commands for the voice assistant (Android) and message dictation; processed entirely on your device and never stored or transmitted</td></tr>
       <tr><td><strong>Siri shortcuts data</strong></td><td>Enable voice-activated reminders (iOS only)</td></tr>
       <tr><td><strong>Usage analytics</strong> — events and user properties (see Section 4)</td><td>Understand how the App is used to improve it</td></tr>
-      <tr><td><strong>Device identifiers</strong></td><td>Crash reporting and analytics</td></tr>
+      <tr><td><strong>Device identifiers</strong> — iOS Vendor ID (IDFV) or Android Advertising ID (GAID)</td><td>Crash reporting and analytics</td></tr>
     </table>
-    <p>I do <strong>not</strong> collect payment card details. Payments are handled entirely by Apple.</p>
+    <p>I do <strong>not</strong> collect payment card details. Payments are handled entirely by Apple or Google.</p>
     <p>I do <strong>not</strong> store the full text of greeting messages you compose. Only a short excerpt is saved to your greeting history.</p>
     <p>I do <strong>not</strong> access your camera. Photo access is limited to your existing photo library when you choose to add a photo to a card.</p>
 
@@ -75,22 +75,22 @@
         <td><a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a></td>
       </tr>
       <tr>
-        <td><strong>Google</strong></td>
-        <td>Sign-in via Google account</td>
-        <td>Google account name and email (sign-in only)</td>
+        <td><strong>Google / Google Play</strong></td>
+        <td>Sign-in via Google account; in-app purchases and subscriptions (Android)</td>
+        <td>Google account name and email (sign-in); purchase receipts (Android)</td>
         <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
-      </tr>
-      <tr>
-        <td><strong>Anthropic</strong></td>
-        <td>AI greeting message generation — when you create a custom occasion, the occasion label (e.g. "Retirement party") is sent to Claude to generate greeting template suggestions. No personal data (names, emails, or contact details) is sent. Generated templates are stored and shared across all users.</td>
-        <td>Occasion label only</td>
-        <td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td>
       </tr>
       <tr>
         <td><strong>Mixpanel</strong></td>
         <td>Usage analytics</td>
-        <td>A pseudonymous user ID, email, platform, country, premium status, friend count, and in-app events (e.g. "reminder saved", "card built"). No message content or friend names are sent.</td>
+        <td>A user ID, email address (used to link analytics to your account), platform, country, premium status, friend count, and in-app events (e.g. "reminder saved", "card built"). No message content or friend names are sent. Mixpanel processes this data as our data processor under a Data Processing Agreement.</td>
         <td><a href="https://mixpanel.com/legal/privacy-policy" target="_blank">mixpanel.com/legal/privacy-policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Anthropic</strong></td>
+        <td>AI greeting message generation — when you create a custom occasion, the occasion label (e.g. "Retirement party") is sent to Claude to generate greeting template suggestions. <strong>Do not include personal names or private details in occasion labels.</strong> No other personal data (names, emails, or contact details) is sent. Generated templates are stored and shared across all users. Anthropic processes occasion labels as our data processor under a Data Processing Agreement.</td>
+        <td>Occasion label only</td>
+        <td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td>
       </tr>
       <tr>
         <td><strong>Facebook</strong> (optional)</td>
@@ -110,7 +110,12 @@
     <hr />
 
     <h2>5. International Data Transfers</h2>
-    <p>Your data is stored on Supabase and Mixpanel servers, which may be located outside your country. If you are in the EU/UK, these transfers are covered by Standard Contractual Clauses (SCCs) or equivalent safeguards.</p>
+    <p>Your data is stored on servers which may be located outside your country. Transfers are protected as follows:</p>
+    <ul>
+      <li><strong>Supabase</strong> (US): covered by EU Standard Contractual Clauses (EU Commission Decision 2021/914).</li>
+      <li><strong>Mixpanel</strong> (US): covered by EU Standard Contractual Clauses or the EU–US Data Privacy Framework, per Mixpanel's Data Processing Agreement.</li>
+      <li><strong>Anthropic</strong> (US): covered by EU Standard Contractual Clauses per Anthropic's Data Processing Agreement.</li>
+    </ul>
     <p>For <strong>Hong Kong</strong> users: transfers outside HK are only made where adequate protection exists or with your consent.</p>
 
     <hr />
@@ -121,12 +126,14 @@
     <hr />
 
     <h2>7. Data Retention</h2>
-    <ul>
-      <li>Account data: retained while your account is active.</li>
-      <li>Friends, events, reminders, and greeting history: deleted when you remove them or delete your account.</li>
-      <li>After account deletion: all personal data in the database is permanently erased within <strong>30 days</strong>.</li>
-      <li>Analytics data in Mixpanel: your identity is reset on account deletion; historical event data may be retained in aggregated, anonymised form per Mixpanel's retention policy.</li>
-    </ul>
+    <table>
+      <tr><th>Data</th><th>Retention Period</th></tr>
+      <tr><td>Account data</td><td>Retained while your account is active</td></tr>
+      <tr><td>Friends, events, reminders, greeting history</td><td>Deleted when you remove them or delete your account</td></tr>
+      <tr><td>After account deletion</td><td>All personal data permanently erased within <strong>30 days</strong></td></tr>
+      <tr><td>Crash reports</td><td>Retained for up to <strong>90 days</strong>, then deleted</td></tr>
+      <tr><td>Analytics data (Mixpanel)</td><td>Event data retained for up to <strong>25 months</strong>; your identity is reset on account deletion and historical event data is retained in aggregated, anonymised form only</td></tr>
+    </table>
 
     <hr />
 
@@ -171,11 +178,12 @@
       <li>Complain to the Office of the Privacy Commissioner for Personal Data (PCPD)</li>
     </ul>
 
-    <p><strong>United States — California</strong> (CCPA)</p>
+    <p><strong>United States — California</strong> (CCPA / CPRA)</p>
     <ul>
-      <li>Know what data is collected</li>
-      <li>Delete your data</li>
-      <li>Opt out of the sale of personal information (I do not sell your data)</li>
+      <li>Know what personal information is collected and how it is used</li>
+      <li>Access, correct, or delete your personal information</li>
+      <li>Opt out of the sale or sharing of personal information for cross-context behavioural advertising (I do not sell or share your data for advertising purposes)</li>
+      <li>Limit the use of sensitive personal information</li>
     </ul>
 
     <p>To exercise any right, email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a>. I will respond within <strong>30 days</strong>.</p>
@@ -214,7 +222,7 @@
     <hr />
 
     <h2>15. Contact</h2>
-    <p><strong>Nazar Verbytskyi</strong><br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
+    <p><strong>Nazar Verbytskyi</strong><br />Stanczyka 22, Kraków, 30-126, Poland<br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
 
     <footer>© 2026 GreetPop · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></footer>
   </div>
