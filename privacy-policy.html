@@ -11,7 +11,7 @@
     <header><a href="index.html">Greet<span>Pop</span></a></header>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 24 May 2026</p>
+    <p class="updated">Last updated: 25 May 2026</p>
 
     <p>This Privacy Policy explains how Nazar Verbytskyi ("I", "me", "my") collects, uses, and protects your personal data when you use <strong>GreetPop</strong> ("the App").</p>
 
@@ -40,6 +40,7 @@
       <tr><td><strong>Siri shortcuts data</strong></td><td>Enable voice-activated reminders (iOS only)</td></tr>
       <tr><td><strong>Usage analytics</strong> — events and user properties (see Section 4)</td><td>Understand how the App is used to improve it</td></tr>
       <tr><td><strong>Device identifiers</strong> — iOS Vendor ID (IDFV) or Android Advertising ID (GAID)</td><td>Crash reporting and analytics</td></tr>
+      <tr><td><strong>Error and crash data</strong> (see Section 4 — Sentry)</td><td>Monitor app stability, diagnose crashes, and improve reliability</td></tr>
     </table>
     <p>I do <strong>not</strong> collect payment card details. Payments are handled entirely by Apple or Google.</p>
     <p>I do <strong>not</strong> store the full text of greeting messages you compose. Only a short excerpt is saved to your greeting history.</p>
@@ -93,6 +94,12 @@
         <td><a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></td>
       </tr>
       <tr>
+        <td><strong>Sentry</strong></td>
+        <td>Error tracking and crash reporting — to monitor app stability and diagnose errors, we send crash logs, error stack traces, performance data, and session replay video to Sentry, a monitoring service operated by Functional Software, Inc. (US). Data sent includes: your user ID (to link errors to your account), application crash logs and exception stack traces, device information (type, OS version, app version), IP address, a short video replay of the session before the error occurred (sampling ~10% of normal sessions, 100% of error sessions), navigation breadcrumbs (user actions like button taps and screen transitions), and optional custom context. Sentry processes this data as our data processor under a Data Processing Agreement. Data is retained for up to 90 days then deleted.</td>
+        <td>User ID, crash logs, stack traces, device info, IP address, session replay video, breadcrumbs, performance data</td>
+        <td><a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a></td>
+      </tr>
+      <tr>
         <td><strong>Facebook</strong> (optional)</td>
         <td>Birthday import via in-app browser — only if you choose to use this feature</td>
         <td>You authenticate directly with Facebook; I receive only the birthday data you approve</td>
@@ -115,6 +122,7 @@
       <li><strong>Supabase</strong> (US): covered by EU Standard Contractual Clauses (EU Commission Decision 2021/914).</li>
       <li><strong>Mixpanel</strong> (US): covered by EU Standard Contractual Clauses or the EU–US Data Privacy Framework, per Mixpanel's Data Processing Agreement.</li>
       <li><strong>Anthropic</strong> (US): covered by EU Standard Contractual Clauses per Anthropic's Data Processing Agreement.</li>
+      <li><strong>Sentry</strong> (US): covered by EU Standard Contractual Clauses per Sentry's Data Processing Agreement.</li>
     </ul>
     <p>For <strong>Hong Kong</strong> users: transfers outside HK are only made where adequate protection exists or with your consent.</p>
 
@@ -132,6 +140,7 @@
       <tr><td>Friends, events, reminders, greeting history</td><td>Deleted when you remove them or delete your account</td></tr>
       <tr><td>After account deletion</td><td>All personal data permanently erased within <strong>30 days</strong></td></tr>
       <tr><td>Crash reports</td><td>Retained for up to <strong>90 days</strong>, then deleted</td></tr>
+      <tr><td>Sentry error/crash data and session replay video</td><td>Retained for up to <strong>90 days</strong>, then automatically deleted</td></tr>
       <tr><td>Analytics data (Mixpanel)</td><td>Event data retained for up to <strong>25 months</strong>; your identity is reset on account deletion and historical event data is retained in aggregated, anonymised form only</td></tr>
     </table>
 
@@ -228,12 +237,25 @@
 
     <hr />
 
-    <h2>14. Changes to This Policy</h2>
+    <h2>14. Session Replay and Error Monitoring</h2>
+    <p>To help us diagnose crashes and improve app stability, Sentry records a short replay video of user sessions before errors occur. This replay captures:</p>
+    <ul>
+      <li>Screens displayed and UI interactions</li>
+      <li>Your taps and gestures</li>
+      <li>Device orientation changes</li>
+      <li>Navigation between screens</li>
+      <li>Your user ID (to link replays to your account)</li>
+    </ul>
+    <p>Session replays are sampled at approximately 10% of normal sessions and 100% of sessions with errors. Replays are retained for up to 90 days then permanently deleted. Replay data is encrypted in transit and at rest.</p>
+
+    <hr />
+
+    <h2>15. Changes to This Policy</h2>
     <p>I may update this policy occasionally. I will notify you via the App or email for material changes. The "Last updated" date at the top will always reflect the current version.</p>
 
     <hr />
 
-    <h2>15. Contact</h2>
+    <h2>16. Contact</h2>
     <p><strong>Nazar Verbytskyi</strong><br />Stanczyka 22, Kraków, 30-126, Poland<br />Email: <a href="mailto:verbytskyi.nazar@gmail.com">verbytskyi.nazar@gmail.com</a></p>
 
     <footer>© 2026 GreetPop · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></footer>
